@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>踢腳板工程管理系統</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+    body { 
+        font-family: 'Noto Sans TC', sans-serif; 
+        padding-bottom: env(safe-area-inset-bottom); /* 適應 iPhone 底部橫條 */
+    }
+    
+    /* 防止 iPhone 點擊輸入框時畫面自動放大 */
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+
+    #print-area { display: none; }
+    @media print {
+      body { background: white !important; color: black; }
+      #app-interface, .no-print { display: none !important; }
+      #print-area { display: block !important; padding: 10px; }
+      .print-table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; }
+      .print-table th, .print-table td { border: 1px solid #333; padding: 8px; text-align: center; }
+      .print-table th { background-color: #f8f9fa !important; -webkit-print-color-adjust: exact; }
+      .report-header { text-align: center; margin-bottom: 25px; }
+      .report-title { font-size: 28px; font-weight: bold; border-bottom: 3px double #000; display: inline-block; padding: 0 40px 5px 40px; margin-bottom: 5px; }
+    }
+
+    .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    .status-unpaid { color: #dc2626; background: #fee2e2; padding: 2px 8px; border-radius: 99px; font-weight: bold; font-size: 12px; }
+    .status-paid { color: #059669; background: #d1fae5; padding: 2px 8px; border-radius: 99px; font-weight: bold; font-size: 12px; }
+    .status-invoiced { color: #2563eb; background: #dbeafe; padding: 2px 8px; border-radius: 99px; font-weight: bold; font-size: 12px; }
+    .sync-loader { animation: spin 1.5s linear infinite; }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="bg-slate-100 min-h-screen text-slate-800">
+    </body>
+</html>
